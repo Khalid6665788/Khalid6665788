@@ -19,6 +19,17 @@ else:
     print("Incorrect password")
     exit()
 os.system('clear')
+from rich.console import Console
+from rich.text import Text
+import pyfiglet
+
+console = Console()
+
+# إنشاء النص بأسلوب ASCII Art
+ascii_text = pyfiglet.figlet_format("FKTITN")
+
+# إضافة اللون الأحمر للنص
+console.print(f"[bold red]{ascii_text}[/]")
 # Print "Lada is running" in light blue
 print(Fore.CYAN + 'Lada is running' + Style.RESET_ALL)
 
@@ -34,9 +45,20 @@ print(Style.RESET_ALL)
 
 # Confirm the input
 os.system('clear')
+from rich.console import Console
+from rich.text import Text
+import pyfiglet
 
+console = Console()
+
+# إنشاء النص بأسلوب ASCII Art
+ascii_text = pyfiglet.figlet_format("FKTITN")
+
+# إضافة اللون الأحمر للنص
+console.print(f"[bold red]{ascii_text}[/]")
 # Ask for the passwords from the user
-passwords_to_try = input("🔹 Enter the passwords: ").split()
+print(Fore.GREEN + "🔹 Enter the passwords: " + Style.RESET_ALL, end="")
+passwords_to_try = input().split()
 
 def generate_random_emails(count, domain="gmail.com"):
     """Generate random emails containing only English names with numbers"""
